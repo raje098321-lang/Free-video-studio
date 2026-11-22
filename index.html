@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10121b"><link rel="manifest" href="manifest.json">
+<title>Free Video Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">✦ Free Video Studio</div><span class="pill">Free-first • multi-provider</span></header>
+<main>
+<section class="hero"><p class="eyebrow">YOUR CREATIVE VIDEO WORKSPACE</p><h1>Turn ideas into<br><span>cinematic scenes.</span></h1><p class="sub">Plan a story, generate short clips through available providers, and assemble a longer video.</p></section>
+<section class="panel">
+<label for="api">Backend URL</label><input id="api" value="http://localhost:8000" placeholder="https://your-api.example">
+<label>Choose creation mode</label>
+<div class="row mode-row">
+<label class="mode-choice"><input type="radio" name="mode" value="text" checked> Text to video</label>
+<label class="mode-choice"><input type="radio" name="mode" value="image"> Image to video</label>
+</div>
+<label for="prompt">Describe your video</label><textarea id="prompt" rows="5" placeholder="A cinematic mythological scene, sweeping camera, dramatic light..."></textarea>
+<div id="image-upload" hidden><label for="image">Choose a picture to animate</label><input id="image" type="file" accept="image/png,image/jpeg,image/webp"><p class="muted">Upload a picture you own or have permission to use.</p></div>
+<div class="row"><div><label for="duration">Final duration</label><select id="duration"><option value="30">30 seconds</option><option value="60">1 minute</option><option value="120">2 minutes</option><option value="180">3 minutes</option><option value="240">4 minutes</option></select></div><div><label for="scene">Clip length</label><select id="scene"><option value="5">5 sec scenes</option><option value="10">10 sec scenes</option></select></div></div>
+<button id="plan">Create scene plan</button><button class="secondary" id="generate">Generate one test clip</button>
+<div id="status" role="status"></div>
+</section>
+<section class="panel"><div class="row head"><h2>Scene plan</h2><span id="count" class="pill">No scenes yet</span></div><div id="scenes" class="scenes"><p class="muted">Your scene breakdown will appear here.</p></div></section>
+<section class="notice"><strong>Free usage note</strong><p>Free GPU access has daily quotas and queues. Four minutes means a stitched sequence of short clips, not one guaranteed four-minute generation. Save your scene plan and resume when quotas reset.</p></section>
+</main>
+<footer>Prototype • Configure real model endpoints in the backend</footer>
+<script src="app.js"></script>
+</body></html>

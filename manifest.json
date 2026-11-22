@@ -1,0 +1,9 @@
+{
+  "name": "Free Video Studio",
+  "short_name": "Video Studio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0c0e15",
+  "theme_color": "#10121b",
+  "icons": []
+}
